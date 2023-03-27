@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.grid-container {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+
+  /* row gap, column gap */
+  gap: 10px 50px;
+}
+
+h1 {
+  /* expand across two columns*/
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+  /* shorter */
+  grid-column: 1 / 3;
+
+  /* not relying on the grid lines */
+  grid-column: span 2;
+  grid-row: span 2;
+
+}
+
+/* p:nth-child(odd) {
+  background-color: greenyellow;
+} */
+
+p {
+  margin: 0;
+  padding: 20px;
+}
+
+.over {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  background-color: #99cd329b
+}
+
+.under {
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+  background-color: #ff00ff86;
+}
